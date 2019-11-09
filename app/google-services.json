@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "479482017331",
+    "firebase_url": "https://classroom-35377.firebaseio.com",
+    "project_id": "classroom-35377",
+    "storage_bucket": "classroom-35377.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479482017331:android:dbd76627974e0421",
+        "android_client_info": {
+          "package_name": "com.classroomjoin.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "479482017331-uhpr094egkkgkfde2cvsae6itf080f67.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.classroomjoin.app",
+            "certificate_hash": "599ce6819adf94443b72f6f9372b87af4118e9e0"
+          }
+        },
+        {
+          "client_id": "479482017331-hl2uvb08qvucaeu5g0efdt2qofueadnt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.classroomjoin.app",
+            "certificate_hash": "dde1765d09d69cdcacf230fe296ffb9f4943a9d9"
+          }
+        },
+        {
+          "client_id": "479482017331-gjspieejupr85hb5i4bsmnf5n3oi0cth.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYYQXDilSC0x_Pqtuxp8VSgp5cXe8fgfs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "479482017331-gjspieejupr85hb5i4bsmnf5n3oi0cth.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

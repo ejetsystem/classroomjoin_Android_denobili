@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+       <!-- <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/template_button_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@color/transparent"
+                android:contentDescription="@string/nan"
+                android:padding="10dp"
+                android:visibility="visible"
+                app:srcCompat="@mipmap/template_pic" />
+
+            <ImageButton
+                android:id="@+id/attachment_icon_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@color/transparent"
+                android:contentDescription="@string/nan"
+                android:padding="10dp"
+                android:visibility="gone"
+                app:srcCompat="@mipmap/camere_pic" />
+
+            <ImageButton
+                android:id="@+id/attachment_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@color/transparent"
+                android:contentDescription="@string/nan"
+                android:padding="10dp"
+                android:visibility="gone"
+                app:srcCompat="@mipmap/attchment_pic" />
+
+
+        </LinearLayout>-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_attachments"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="13dp"
+            android:visibility="gone" />
+
+
+        <include
+            android:id="@+id/include_content"
+            layout="@layout/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/event_diary_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/diary_type"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_diary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/diary_type_diary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:button="@null"
+                android:checked="true"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/radio_button"
+                android:gravity="center|start"
+                android:text="@string/diary"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/diary_type_assignment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:button="@null"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/radio_button"
+                android:gravity="center|start"
+                android:text="@string/assignement"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/diary_type_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:button="@null"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/radio_button"
+                android:gravity="center|start"
+                android:text="@string/notice"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/diary_type_events"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:button="@null"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/radio_button"
+                android:gravity="center|start"
+                android:text="@string/events"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+
+        <RadioGroup
+            android:id="@+id/radio_group_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <RadioButton
+                android:id="@+id/send_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/radio_button"
+                android:gravity="center|start"
+                android:text="@string/send_now"
+                android:textSize="16sp" />
+
+
+            <RadioButton
+                android:id="@+id/schedule_time_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/radio_button"
+                android:gravity="center|start"
+                android:text="@string/schedlue_time"
+                android:textSize="16sp" />
+
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/event_diary_type1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/select_mobile_preference"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/primary_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/radio_button"
+                android:gravity="center|start"
+                android:text="@string/primary_mobile"
+                android:textSize="16sp" />
+
+
+            <RadioButton
+                android:id="@+id/alternate_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/radio_button"
+                android:gravity="center|start"
+                android:text="@string/alternate_mobile"
+                android:textSize="16sp" />
+
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/message_to_send_here"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectange_shape_template_page"
+            android:gravity="start"
+            android:hint="@string/type_message"
+            android:minLines="2"
+            android:padding="10dp" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

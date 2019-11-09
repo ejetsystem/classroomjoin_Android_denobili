@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_all_events"
+        android:icon="@drawable/nav_all_events"
+        android:title="@string/allevents" />
+    <item
+        android:id="@+id/nav_diary_events"
+        android:icon="@drawable/nav_diary_events"
+        android:title="@string/diary" />
+
+    <item
+        android:id="@+id/nav_message_events"
+        android:icon="@drawable/nav_message_events"
+        android:title="@string/inbox" />
+
+    <item
+        android:id="@+id/nav_social_grade_event"
+        android:icon="@drawable/nav_social_grade"
+        android:title="@string/nav_social_grade_string" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/nav_profile"
+        android:title="@string/profile" />
+
+    <item
+        android:id="@+id/nav_connected_students"
+        android:icon="@drawable/nav_connected_students"
+        android:title="@string/connected_students" />
+
+    <item
+        android:id="@+id/nav_language_settings_parent"
+        android:icon="@drawable/nav_language"
+        android:title="@string/change_language" />
+
+    <item
+        android:id="@+id/nav_accounts"
+        android:icon="@drawable/nav_accounts"
+        android:title="@string/switch_account" />
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/nav_logout"
+        android:title="@string/logout" />
+</menu>

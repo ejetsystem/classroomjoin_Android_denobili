@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/white"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.classroomjoin.app.helper.CircularTextView
+            android:id="@+id/text_first"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:ems="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:maxEms="1"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:text="@string/nan"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/student_roll_no_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/student_name_selection"
+            android:layout_toEndOf="@+id/text_first"
+            android:fontFamily="sans-serif-light"
+            android:gravity="start|center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingStart="2dp"
+            android:text="@string/nan"
+            android:textAlignment="center"
+            android:textColor="#00B51E"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/student_name_selection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/text_first"
+            android:layout_toEndOf="@+id/text_first"
+            android:layout_toStartOf="@+id/roll_no_text_summary"
+            android:ellipsize="marquee"
+            android:fontFamily="sans-serif-medium"
+            android:maxLength="16"
+            android:paddingStart="2dp"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/titles_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/roll_no_text_summary"
+            android:layout_width="58dp"
+            android:layout_height="48dp"
+            android:layout_alignTop="@+id/text_first"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/social_grade_selected"
+            android:background="@drawable/rectangle_roll_no"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center_vertical|center_horizontal"
+            android:maxLength="2"
+            android:text="@string/nan"
+            android:textAlignment="center"
+            android:textColor="#B4B4B4"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <RadioButton
+            android:id="@+id/social_grade_selected"
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

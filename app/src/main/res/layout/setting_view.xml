@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/send_grid_settings"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/edit_settings"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/btn_edit"
+            android:visibility="visible"
+            app:layout_constraintRight_toLeftOf="@+id/save_settings"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/save_settings"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/btn_save"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/username_settings_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingEnd="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingStart="10dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/username_settings_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:enabled="false"
+            android:focusable="false"
+            android:fontFamily="sans-serif"
+            android:hint="@string/hint_input_username"
+            android:inputType="textPersonName"
+            android:textSize="16sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password_settings_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_input_password"
+        android:paddingEnd="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingStart="10dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/password_settings_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:enabled="false"
+            android:focusable="false"
+            android:fontFamily="sans-serif"
+            android:inputType="textPassword"
+            android:textSize="16sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/sender_id_settings_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_input_senderid"
+        android:paddingEnd="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingStart="10dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/sender_id_settings_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:enabled="false"
+            android:focusable="false"
+            android:fontFamily="sans-serif"
+            android:inputType="textPassword"
+            android:textSize="16sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/check_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <ToggleButton
+            android:id="@+id/chkState_settings"
+            android:layout_width="48dp"
+            android:layout_height="26dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/custom_switch"
+            android:clickable="false"
+            android:enabled="false"
+            android:textOff=""
+            android:textOn="" />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:text="@string/activate"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/checkBox_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email SMS" />
+
+        <CheckBox
+            android:id="@+id/checkBox_two"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:text="Email Attendance SMS" />
+    </LinearLayout>
+
+
+</merge>

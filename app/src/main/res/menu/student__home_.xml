@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/attendance_tab"
+        android:orderInCategory="100"
+        android:icon="@drawable/attendance_tab_icon"
+        android:title="@string/action_settings"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_bar_check"
+        app:showAsAction="always"
+        android:orderInCategory="101"
+        android:visible="false"
+        android:icon="@drawable/ic_check_box_black_24dp"
+        android:title="@string/select_all" />
+
+    <item
+        android:id="@+id/action_bar_uncheck"
+        app:showAsAction="always"
+        android:orderInCategory="101"
+        android:icon="@drawable/ic_check_box_outline_blank_black_24dp"
+        android:title="@string/deselect_all" />
+
+    <item
+        android:id="@+id/action_bar_plus"
+        app:showAsAction="always"
+        android:orderInCategory="99"
+        android:icon="@drawable/ic_add_green_24dp"
+        android:title="@string/btn_create" />
+
+    <item
+        android:id="@+id/empty"
+        android:icon="@drawable/ic_more_vert_black_24dp"
+        android:orderInCategory="101"
+        android:title="@string/accounts"
+        app:showAsAction="always">
+
+        <menu>
+
+            <item
+                android:id="@+id/action_sort_name"
+                android:title="@string/sort_by_name"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/action_roll_number"
+                android:title="@string/sort_by_rollnumber"
+                app:showAsAction="ifRoom" />
+
+        </menu>
+
+    </item>
+</menu>

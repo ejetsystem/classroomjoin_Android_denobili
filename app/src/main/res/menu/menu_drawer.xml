@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/nav_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/nav_profile"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/nav_reports"
+            android:icon="@drawable/nav_reports"
+            android:title="@string/report" />
+        <item
+            android:id="@+id/nav_outbox"
+            android:icon="@drawable/nav_outbox"
+            android:title="@string/outbox" />
+    </group>
+
+    <item
+        android:id="@+id/nav_manage_section"
+        android:title="@string/manage">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_social_grade"
+                    android:icon="@drawable/nav_social_grade"
+                    android:title="@string/nav_social_grade_string" />
+                <item
+                    android:id="@+id/nav_template"
+                    android:icon="@drawable/nav_template"
+                    android:title="@string/nav_template_string" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_api_settings"
+        android:title="@string/api_settings">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_email_settings"
+                    android:icon="@drawable/nav_email_settings"
+                    android:title="@string/email_settings" />
+                <item
+                    android:id="@+id/nav_sms_settings"
+                    android:icon="@drawable/nav_email_settings"
+                    android:title="@string/sms" />
+
+                <item
+                    android:id="@+id/nav_message_settings"
+                    android:icon="@drawable/nav_email_settings"
+                    android:title="@string/message_reports" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none"
+        android:title="@string/others">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_language_settings"
+                    android:icon="@drawable/nav_language"
+                    android:title="@string/change_language" />
+                <item
+                    android:id="@+id/nav_accounts"
+                    android:icon="@drawable/nav_accounts"
+                    android:title="@string/switch_account" />
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/nav_logout"
+                    android:title="@string/logout" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

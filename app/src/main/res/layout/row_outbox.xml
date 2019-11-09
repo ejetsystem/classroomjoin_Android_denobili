@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:elevation="4dp"
+    android:orientation="vertical"
+    tools:targetApi="lollipop">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/outbox_type"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/circle_grade"
+            android:contentDescription="@string/nan" />
+
+        <TextView
+            android:id="@+id/outbox_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/outbox_type"
+            android:paddingStart="4dp"
+            android:text="@string/nan"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/outboxmessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/outbox_date"
+            android:layout_toStartOf="@+id/sync_button"
+            android:layout_toEndOf="@+id/outbox_type"
+            android:fontFamily="sans-serif"
+            android:maxLines="3"
+            android:paddingStart="4dp"
+            android:text="@string/nan"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/sync_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/transparent"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_sync_black_24dp"
+            android:contentDescription="@string/nan" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_attachments"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/outboxmessage"
+            android:layout_marginTop="5dp"
+            android:visibility="gone" />
+
+
+        <android.support.v4.widget.ContentLoadingProgressBar
+            android:id="@+id/contentLoading_sync"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

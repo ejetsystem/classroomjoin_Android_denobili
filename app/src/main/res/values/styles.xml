@@ -1,0 +1,140 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/color_designer_green</item>
+        <item name="android:colorBackground">@color/grey_background</item>
+    </style>
+
+
+    <style name="AppThemeTest" parent="BaseTheme" />
+
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item> 
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item> 
+        <item name="colorControlHighlight">@color/colorPrimary</item> 
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- color for widget theming, eg EditText. Doesn't effect ActionBar. -->
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+
+
+    <style name="AppTheme.Reflect" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/color_designer_green</item>
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+        <item name="android:colorBackground">@color/grey_background</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/color_designer_green</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:colorBackground">@color/grey_background</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar2" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/color_designer_green</item>
+        <item name="titleTextColor">@android:color/white</item>
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:colorBackground">@color/grey_background</item>
+    </style>
+
+
+    <style name="ToolbarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorSecondary">@color/green</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    `
+
+    <style name="MyStyle" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">#FFFF</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">8dp</item>
+        <item name="tabPaddingEnd">8dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabSelectedTextColor">#fff</item>
+
+    </style>
+
+    <style name="tab_style_main_page" parent="Widget.Design.TabLayout">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ActionBarStyle" parent="Base.Widget.AppCompat.ActionBar">
+        <item name="titleTextStyle">@style/ActionBarTitle</item>
+        <item name="android:background">@drawable/actionbarbackground</item>
+    </style>
+
+    <style name="ActionBarTitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <item name="item_click_support" type="id" />
+
+    <style name="CustomDateTextAppearance" parent="TextAppearance.MaterialCalendarWidget.Date">
+        <item name="android:textSize">@dimen/dimen16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="CustomWeekDayTextAppearnce" parent="TextAppearance.MaterialCalendarWidget.Date">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/dimen16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="SwitchCompat.Classroom" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:thumb">@drawable/custom_switch</item>
+        <item name="showText">true</item>
+        <item name="android:textOn">@string/activate</item>
+        <item name="android:textOff">@string/deactivate</item>
+    </style>
+
+    <style name="AppTheme.new" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/color_designer_green</item>
+        <item name="android:colorBackground">@color/grey_background</item>
+    </style>
+
+    <color name="grey_background">#EBEBEB</color>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="RippleStyleBlack" parent="RippleStyleWhite">
+        <item name="mrl_rippleColor">#8096989A</item>
+    </style>
+
+    <!-- Ripple Effect -->
+    <style name="RippleStyleWhite">
+        <item name="mrl_rippleOverlay">true</item>
+        <item name="mrl_rippleColor">#80FFFFFF</item>
+        <item name="mrl_rippleHover">true</item>
+        <item name="mrl_rippleAlpha">0.2</item>
+    </style>
+</resources>

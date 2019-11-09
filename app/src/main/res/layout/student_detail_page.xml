@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9AE5DA"
+    android:orientation="vertical"
+    android:paddingTop="20dp">
+
+
+    <com.classroomjoin.app.helper.CircularTextView
+        android:id="@+id/detail_student_name_short"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:maxLength="1"
+        android:maxLines="1"
+        android:text="@string/nan"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#9AE5DA"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/sms_featue_enable"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight=".2"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/ic_sms"
+            android:text="@string/sms"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/message_feature_enable"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight=".2"
+            android:background="@color/transparent"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/ic_message"
+            android:text="@string/message"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/email_feature_enable"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight=".2"
+            android:background="@color/transparent"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/ic_mail"
+            android:text="@string/mail"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/diary_event_enable"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight=".2"
+            android:background="@color/transparent"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/ic_leftnav_diary"
+            android:text="@string/diary"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/social_grade_enable"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight=".2"
+            android:background="@color/transparent"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/ic_leftnav_social"
+            android:text="@string/grade"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/white"
+        android:paddingTop="10dp" />
+
+    <android.support.v4.widget.ContentLoadingProgressBar
+        android:id="@+id/detail_page_content_loading"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/detail_content_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/id_detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingStart="10dp"
+                android:text="@string/title_parent_name" />
+
+            <TextView
+                android:id="@+id/detail_parent_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="44dp"
+                android:text="@string/nan"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/detail_parent_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="44dp"
+                android:paddingTop="2dp"
+                android:text="@string/nan"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/detail_parent_mobile_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="44dp"
+                android:paddingTop="2dp"
+                android:text="@string/nan"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/share_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:drawableEnd="@android:drawable/ic_menu_share"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_code"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingStart="10dp"
+                android:text="@string/title_student_code" />
+
+            <TextView
+                android:id="@+id/detail_student_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="44dp"
+                android:paddingTop="2dp"
+                android:text="@string/nan"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/student_attendance_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/title_attendence_history"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/id_layoutinput_reg_mobile_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/input_mobile_number"
+        android:padding="10dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/input_registration_mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="1"
+            android:inputType="phone"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:padding="10dp"
+        android:text="@string/user_type_selection_text"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/usertype_student"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/susertype_student"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/usertype_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/susertype_parent"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/usertype_individual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/susertype_teacher"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/termsofservice"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_cancel"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_cancel"
+            android:textColor="@color/lighter_red" />
+
+        <Button
+            android:id="@+id/button_ok"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_ok"
+            android:textColor="@color/lighter_green" />
+    </LinearLayout>
+
+</LinearLayout>

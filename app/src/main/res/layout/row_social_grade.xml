@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/socia_grade_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/social_grade_type"
+        android:layout_toEndOf="@+id/social_grade_type"
+        android:drawablePadding="10dp"
+        android:fontFamily="sans-serif"
+        android:maxLines="2"
+        android:paddingStart="10dp"
+        android:text="@string/input_social_grade_name"
+        android:textColor="@color/titles_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/social_grade_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/socia_grade_name"
+        android:layout_toEndOf="@+id/social_grade_type"
+        android:maxLines="1"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="3dp"
+        android:text="@string/nan"
+        android:textColor="@color/titles_color"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/social_grade_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_thumb_up_green_24dp"
+        android:contentDescription="@string/nan" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/social_grade_mark"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/line_color"
+        android:orientation="horizontal" />
+
+</RelativeLayout>

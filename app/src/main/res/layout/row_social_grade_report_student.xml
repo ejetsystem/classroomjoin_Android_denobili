@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="0.8"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/social_grade_name_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:maxLines="1"
+                android:text="@string/nan"
+                android:textColor="#E67817"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/social_grade_teacher_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/social_grade_name_report"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/nan"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_social_grage_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/social_grade_teacher_name"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/nan"
+                android:textColor="#575757"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="0.2"
+            app:cardElevation="5dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/social_grade_mark_report"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/black_background"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/zero"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@id/linearLayout"
+        android:layout_marginTop="5dp"
+        android:background="#04BEA4"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/template_heading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:hint="@string/input_template_heading"
+        android:padding="3dp"
+        android:visibility="visible">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/template_heading_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:inputType="textCapSentences"
+            android:textSize="16sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/template_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:hint="@string/input_template_text"
+        android:padding="3dp"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/template_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rectange_shape_template_page"
+        android:hint="@string/type_message"
+        android:padding="3dp" />
+
+</LinearLayout>

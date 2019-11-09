@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        tools:context="com.classroomjoin.app.studentDetailPage.StudentDetailEditPage">
+
+        <RelativeLayout
+            android:id="@+id/check_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <ToggleButton
+                android:id="@+id/chkState_social_grade"
+                android:layout_width="48dp"
+                android:layout_height="26dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/custom_switch"
+                android:checked="true"
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:id="@+id/social_grade_type_input"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:drawableStart="@drawable/ic_ribbon_1"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:text="@string/positive_social_grade"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/socialgradename_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_social_grade_name"
+            android:padding="3dp"
+
+            android:visibility="visible">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/social_grade_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/text_editor_6"
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/social_grade_mark_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_social_grade_mark"
+            android:padding="3dp"
+            android:visibility="visible">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/social_grade_mark_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_profile"
+                android:fontFamily="sans-serif"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="16sp" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+</ScrollView>
+

@@ -1,0 +1,139 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'kotlin-android'
+apply plugin: 'realm-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+androidExtensions {
+    defaultCacheImplementation = "none"
+    experimental = true
+}
+
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.classroomjoin.app"
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 56
+        versionName "1.27.28"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+        pickFirst 'META-INF/rxjava.properties'
+    }
+
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    def dependencies = rootProject.ext.viewDependencies
+    def networkingDependecies = rootProject.ext.networkingDependecies
+
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:support-annotations:28.0.0'
+
+    compile 'com.google.android.gms:play-services-auth:16.0.1'
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+    implementation 'com.google.firebase:firebase-messaging:17.3.3'
+    implementation 'com.google.firebase:firebase-config:16.0.1'
+    implementation 'com.google.firebase:firebase-crash:16.2.1'
+   // implementation 'com.google.firebase:firebase-ads:17.0.0'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.5'
+
+    implementation dependencies.adapterDelegate
+    implementation dependencies.picasso
+    implementation dependencies.rxBinding
+    implementation networkingDependecies.okHttp
+    implementation networkingDependecies.rxJava
+    implementation networkingDependecies.rxAndroid
+    implementation networkingDependecies.retrofit
+    implementation networkingDependecies.retrofitConverter
+    implementation networkingDependecies.okHttpLoggingInterceptor
+    implementation networkingDependecies.rxConverter
+    implementation networkingDependecies.dagger
+    implementation networkingDependecies.gson
+    implementation networkingDependecies.javaxInject
+    implementation 'lt.neworld:spanner:0.5.0'
+    implementation 'com.karumi:dexter:5.0.0'
+    implementation 'com.appeaser.sublimepickerlibrary:sublimepickerlibrary:2.1.1'
+    implementation 'com.balysv:material-ripple:1.0.2'
+    implementation 'com.akexorcist:localizationactivity:1.2.2'
+    implementation 'com.jaredrummler:material-spinner:1.2.5'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    implementation 'com.github.vicpinm:krealmextensions:1.0.4'
+    implementation 'org.jetbrains.anko:anko-sdk15:0.9.1'
+    implementation 'org.jetbrains.anko:anko-support-v4:0.9.1'
+
+    implementation 'com.shobhitpuri.custombuttons:google-signin:1.0.0'
+
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+    implementation 'com.linkedin.shaky:shaky:1.1.1'
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'agency.tango.android:avatar-view:0.0.2'
+    implementation 'agency.tango.android:avatar-view-picasso:0.0.2'
+    testImplementation 'junit:junit:4.12'
+    kapt 'com.google.dagger:dagger-compiler:2.10'
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '27.1.1'
+                }
+            }
+        }
+    }
+}
+apply plugin: 'com.google.gms.google-services'

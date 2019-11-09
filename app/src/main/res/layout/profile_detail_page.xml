@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9AE5DA"
+    android:orientation="vertical">
+
+    <agency.tango.android.avatarview.views.AvatarView
+        android:id="@+id/profile_image_new"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center"
+        android:paddingTop="20dp"
+        android:visibility="gone"
+        app:av_border_color="@android:color/white"
+        app:av_border_width="2dp"
+        app:av_text_size_percentage="55" />
+
+
+    <LinearLayout
+        android:id="@+id/error_profile_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/image_error"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/nan"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_cloud_off_black_24dp" />
+
+        <TextView
+            android:id="@+id/text_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/error"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <android.support.v4.widget.ContentLoadingProgressBar
+        android:id="@+id/profile_page_content_loading"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/detail_content_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/id_detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingStart="10dp"
+                android:text="@string/title_personal_details" />
+
+            <TextView
+                android:id="@+id/profile_ps_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="44dp"
+                android:text="@string/nan"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/contact_details_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_code"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingStart="10dp"
+                android:text="@string/title_contact_details" />
+
+            <TextView
+                android:id="@+id/profile_contact_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingStart="44dp"
+                android:paddingTop="2dp"
+                android:text="@string/nan"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

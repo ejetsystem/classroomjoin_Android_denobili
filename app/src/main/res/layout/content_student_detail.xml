@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EBEBEB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:padding="10dp"
+        tools:context="com.classroomjoin.app.studentDetailPage.StudentDetailEditPage">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/roll_no_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_roll_number"
+            android:padding="3dp"
+            android:textColorHint="@color/colorPrimary"
+            android:visibility="visible">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/roll_no_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/text_editor_6"
+                android:fontFamily="sans-serif"
+                android:inputType="number"
+                android:textSize="16sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/student_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_student_name"
+            android:padding="3dp"
+            android:textColorHint="@color/colorPrimary"
+            android:visibility="visible">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/student_name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/user"
+                android:fontFamily="sans-serif"
+                android:inputType="textCapSentences"
+                android:textSize="16sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/admission_id_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_student_admission_id"
+            android:padding="3dp"
+            android:textColorHint="@color/colorPrimary"
+            android:visibility="visible">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/admission_id_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/name_tag_3"
+                android:fontFamily="sans-serif"
+                android:inputType="number"
+                android:textSize="16sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/parent_mobile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/parent_phone"
+            android:padding="3dp"
+            android:textColorHint="@color/colorPrimary"
+            android:visibility="visible">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/parent_mobile_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/phone_signup"
+                android:fontFamily="sans-serif"
+                android:inputType="number"
+                android:textSize="16sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="#04BEA4"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/student_detail_imageview"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/nan"
+            android:visibility="gone"
+            app:srcCompat="@drawable/datanotfound3" />
+
+        <TextView
+            android:id="@+id/student_detail_message_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/app_name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/size_20sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <android.support.v4.widget.ContentLoadingProgressBar
+            android:id="@+id/student_detail_content_loading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible" />
+    </LinearLayout>
+</ScrollView>
+

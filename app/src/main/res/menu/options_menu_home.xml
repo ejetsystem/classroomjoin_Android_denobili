@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <!--  <item
+        android:title="@string/filter_events"
+        android:id="@+id/spinner"
+        yourapp:showAsAction="ifRoom"
+        yourapp:actionViewClass="android.widget.Spinner" />-->
+
+    <item
+        android:id="@+id/empty"
+        android:icon="@drawable/ic_more_vert_black_24dp"
+        android:orderInCategory="101"
+        android:title="@string/accounts"
+        app:showAsAction="always">
+
+        <menu>
+
+            <item
+                android:id="@+id/action_sort_name_att"
+                android:title="@string/sort_by_name"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/action_roll_number_att"
+                android:title="@string/sort_by_rollnumber"
+                app:showAsAction="ifRoom" />
+
+        </menu>
+
+    </item>
+</menu>
