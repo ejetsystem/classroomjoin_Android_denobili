@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: lt.neworld:spanner:0.5.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/spanner-0.5.0.aar/902e7e7d6f289cc0520627c6bafb2ac1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/spanner-0.5.0.aar/902e7e7d6f289cc0520627c6bafb2ac1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/lt.neworld/spanner/0.5.0/8acaeab137859cb8d6e7c794dc811c146d12efc0/spanner-0.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
