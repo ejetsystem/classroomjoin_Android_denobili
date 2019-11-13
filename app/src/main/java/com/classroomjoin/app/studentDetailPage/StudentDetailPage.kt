@@ -90,7 +90,7 @@ class StudentDetailPage : LocalizationActivity() {
             if (detail_parent_mobile_number.text != null && !detail_parent_mobile_number.text.equals("")) {
                 val callIntent = Intent(Intent.ACTION_CALL)
                 callIntent.data = Uri.parse("tel:" + detail_parent_mobile_number.text)
-                if (getPermissions())
+                //if (getPermissions())
                     startActivity(callIntent)
             }
         }
@@ -191,17 +191,6 @@ class StudentDetailPage : LocalizationActivity() {
 
     }
 
-    private fun getPermissions(): Boolean {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), 200)
-            } else {
-                return true
-            }
-            return false
-        } else
-            return true
-    }
 
     private fun showcontent() {
         detail_page_content_loading.hide()

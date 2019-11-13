@@ -102,8 +102,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, AnkoLogger {
         Dexter.withActivity(this)
                 .withPermissions(
                         Manifest.permission.CAMERA,
-                        Manifest.permission.RECEIVE_SMS,
-                        Manifest.permission.CALL_PHONE,
+
                         Manifest.permission.READ_EXTERNAL_STORAGE,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE
                 ).withListener(object : MultiplePermissionsListener {

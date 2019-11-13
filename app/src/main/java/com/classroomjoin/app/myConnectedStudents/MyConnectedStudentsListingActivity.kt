@@ -89,9 +89,9 @@ class MyConnectedStudentsListingActivity : BaseListActivity(), ForceUpdateChecke
         Dexter.withActivity(this)
                 .withPermissions(
                         Manifest.permission.CAMERA,
-                        Manifest.permission.RECEIVE_SMS,
+
                         Manifest.permission.READ_EXTERNAL_STORAGE,
-                        Manifest.permission.CALL_PHONE,
+
                         Manifest.permission.WRITE_EXTERNAL_STORAGE
 
                 ).withListener(object : MultiplePermissionsListener {

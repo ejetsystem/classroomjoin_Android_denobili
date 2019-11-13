@@ -66,16 +66,8 @@ interface ApiInterface {
     companion object {
 
         //Production
-       // val url = "http://api.classroomjoin.com/app/"
+        val url = "http://api.classroomjoin.com/app/"
 
-        //Development
-        val url = "http://classroomjoin.ap-south-1.elasticbeanstalk.com/app/"
-
-        //Testing
-        // val url = "http://classroomjoinproduction-env-1.q8fp3dpqnf.ap-south-1.elasticbeanstalk.com/"
-
-        //Local
-        // val url="http://192.168.1.102:8080/app/"
 
         const val tokenkey = "Authorization"
     }

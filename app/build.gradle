@@ -17,8 +17,8 @@ android {
         applicationId "com.classroomjoin.app"
         minSdkVersion 17
         targetSdkVersion 28
-        versionCode 56
-        versionName "1.27.28"
+        versionCode 60
+        versionName "1.27.32"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
 
