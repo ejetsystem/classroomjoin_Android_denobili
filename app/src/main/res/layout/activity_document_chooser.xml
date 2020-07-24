@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.classroomjoin.app.teacherAttachmentPage.DocumentChooserActivity">
+    tools:context="com.denobili.app.teacherAttachmentPage.DocumentChooserActivity">
 
     <Button
         android:id="@+id/attach_document"

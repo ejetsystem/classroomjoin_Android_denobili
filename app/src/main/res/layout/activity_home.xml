@@ -1,0 +1,147 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+   <ImageView
+       android:id="@+id/base_home_image"
+       android:layout_width="160dp"
+       android:layout_height="160dp"
+       android:layout_gravity="center"
+       android:layout_marginTop="10dp"
+       android:contentDescription="@string/nan"
+       android:visibility="gone"
+       app:srcCompat="@drawable/ic_error_black_24dp" />
+
+   <TextView
+       android:id="@+id/base_home_textview"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:fontFamily="sans-serif"
+       android:gravity="center"
+       android:padding="10dp"
+       android:text="@string/app_name"
+       android:textColor="@color/colorPrimary"
+       android:textSize="@dimen/size_20sp"
+       android:textStyle="bold|italic"
+       android:visibility="gone" />
+   <WebView
+       android:id="@+id/webView"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:visibility="visible"/>
+   <RelativeLayout
+       android:id="@+id/checkStatus"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:visibility="gone">
+      <ImageView
+          android:id="@+id/success"
+          android:layout_width="140dp"
+          android:src="@drawable/succes"
+          android:layout_centerHorizontal="true"
+          android:layout_centerVertical="true"
+          android:scaleType="fitXY"
+          android:layout_height="140dp"
+          />
+      <TextView
+          android:id="@+id/pay"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+         android:text="Payment Successful"
+         android:layout_below="@+id/success"
+         android:textColor="@color/green"
+         android:textSize="25dp"
+         android:layout_centerHorizontal="true"/>
+      <TextView
+          android:id="@+id/orderId"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="OrderId-4120200603133223"
+          android:layout_below="@+id/pay"
+          android:textColor="@color/red"
+          android:textSize="15dp"
+          android:layout_centerHorizontal="true"/>
+      <TextView
+          android:id="@+id/invoiceId1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Amount-13012"
+          android:layout_below="@+id/orderId"
+          android:textColor="@color/blue"
+          android:textSize="15dp"
+          android:layout_centerHorizontal="true"/>
+      <TextView
+          android:id="@+id/amountPay"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="InvoiceId-13012"
+          android:layout_below="@+id/invoiceId1"
+          android:textColor="@color/blue"
+          android:textSize="15dp"
+          android:layout_centerHorizontal="true"/>
+
+      <TextView
+          android:id="@+id/goback"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+         android:textSize="18dp"
+         android:textColor="@color/red"
+         android:text="Go Back"
+         android:layout_alignParentBottom="true"
+         android:layout_centerHorizontal="true"
+         android:layout_marginBottom="40dp"/>
+   </RelativeLayout>
+
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="#2ecc71"
+            android:gravity="center"
+            android:drawablePadding="24dp"
+            android:text="JusPay Integration"/>
+
+
+        <Button
+            android:id="@+id/FL_Extended"
+            android:layout_width="250dip"
+            android:layout_height="48dp"
+            android:paddingLeft="32dp"
+            android:layout_marginTop="20dp"
+            android:paddingRight="32dp"
+            android:minWidth="128dp"
+            android:gravity="center"
+            android:background="#2ecc71"
+            android:textColor="#fff"
+            android:text="FL &amp; JBF Extended"
+            android:layout_margin="16dp"
+            android:onClick="extendedButtonClicked"/>
+
+        <Button
+            android:id="@+id/FL_Simple"
+            android:layout_width="250dip"
+            android:layout_height="48dp"
+            android:paddingLeft="32dp"
+            android:background="#2ecc71"
+            android:textColor="#fff"
+            android:paddingRight="32dp"
+            android:minWidth="128dp"
+            android:gravity="center"
+            android:text="FL &amp; JBF Direct"
+            android:layout_margin="16dp"
+            android:onClick="directButtonClicked"/>
+
+    </LinearLayout>-->
+
+
+</LinearLayout>

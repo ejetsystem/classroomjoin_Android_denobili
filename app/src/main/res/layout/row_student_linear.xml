@@ -12,7 +12,7 @@
         android:padding="10dp">
 
 
-        <com.classroomjoin.app.helper.CircularTextView
+        <com.denobili.app.helper.CircularTextView
             android:id="@+id/row_connected_studentname_short"
             android:layout_width="48dp"
             android:layout_height="48dp"

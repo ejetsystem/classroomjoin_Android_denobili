@@ -143,7 +143,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <com.classroomjoin.app.helper.CircularTextView
+        <com.denobili.app.helper.CircularTextView
             android:id="@+id/text_first_class"
             android:layout_width="48dp"
             android:layout_height="48dp"

@@ -21,7 +21,7 @@
             android:padding="10dp"
             android:focusable="true">
 
-            <com.classroomjoin.app.helper.CircularTextView
+            <com.denobili.app.helper.CircularTextView
                 android:id="@+id/circularTextView2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"

@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingTop="15dp"
-        tools:context="com.classroomjoin.app.studentDetailPage.StudentDetailEditPage">
+        tools:context="com.denobili.app.studentDetailPage.StudentDetailEditPage">
 
         <RelativeLayout
             android:id="@+id/check_settings"

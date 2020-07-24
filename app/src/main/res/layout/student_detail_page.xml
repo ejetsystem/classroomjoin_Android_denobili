@@ -7,7 +7,7 @@
     android:paddingTop="20dp">
 
 
-    <com.classroomjoin.app.helper.CircularTextView
+    <com.denobili.app.helper.CircularTextView
         android:id="@+id/detail_student_name_short"
         android:layout_width="72dp"
         android:layout_height="72dp"

@@ -16,7 +16,9 @@
     <color name="grey_dark">#262626</color>
     <color name="grey_medium">#BDBFC1</color>
     <color name="grey_color">#9e9e9e</color>
-
+    <color name="startColor">#F137A6</color>
+    <color name="centerColor">#F77A85</color>
+    <color name="endColor">#FDBB69</color>
     <color name="line_color">#6B6768</color>
 
     <color name="titles_color">#464646</color>
@@ -42,5 +44,8 @@
     <color name="color_designer_green">#04bea4</color>
 
     <color name="black_overlay">#66000000</color>
+    <color name="color_accent">#000</color>
+    <color name="light_gray">#ECECEC</color>
+    <color name="light_blue">#ECFDFF</color>
 
 </resources>

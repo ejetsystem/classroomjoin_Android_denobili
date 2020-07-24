@@ -12,7 +12,7 @@
         android:orientation="vertical"
 
         android:padding="10dp"
-        tools:context="com.classroomjoin.app.studentDetailPage.StudentDetailEditPage">
+        tools:context="com.denobili.app.studentDetailPage.StudentDetailEditPage">
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/roll_no_layout"

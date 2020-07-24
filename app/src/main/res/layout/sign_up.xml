@@ -7,7 +7,7 @@
     android:layout_marginRight="10dp"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context="com.classroomjoin.app.studentDetailPage.StudentDetailEditPage">
+    tools:context="com.denobili.app.studentDetailPage.StudentDetailEditPage">
 
     <ScrollView
         android:layout_width="match_parent"

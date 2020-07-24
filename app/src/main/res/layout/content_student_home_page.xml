@@ -20,7 +20,7 @@
             android:layout_centerVertical="true"
             android:orientation="horizontal">
 
-            <com.classroomjoin.app.helper.CircularTextView
+            <com.denobili.app.helper.CircularTextView
                 android:id="@+id/row_connected_studentname_short"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -78,7 +78,7 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="30dp"
         android:orientation="vertical"
-        android:weightSum="3">
+        android:weightSum="4.2">
 
         <TableRow
             android:layout_width="match_parent"
@@ -107,21 +107,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:id="@+id/home_all_events"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:clickable="true"
                         android:focusable="true"
-                        android:gravity="center_vertical|center_horizontal"
                         android:orientation="vertical"
                         android:padding="10dp">
 
 
                         <ImageView
+                            android:id="@+id/allIcon"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_margin="5dp"
+                            android:layout_centerHorizontal="true"
                             android:contentDescription="@string/nan"
                             app:srcCompat="@drawable/all_parent" />
 
@@ -129,13 +130,30 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="3dp"
+                            android:layout_below="@+id/allIcon"
                             android:text="@string/allevents"
+                            android:layout_centerHorizontal="true"
                             android:textColor="@color/material_gre"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/all_count"
+                            android:layout_width="@dimen/size_20sp"
+                            android:layout_height="20dp"
+                            android:padding="2dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/circle"
+                            android:layout_marginLeft="55dp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:backgroundTint="@color/red"
+                            android:text="@string/allevents"
+                            android:textColor="@color/white"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
 
-                    </LinearLayout>
+                    </RelativeLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </android.support.v7.widget.CardView>
 
@@ -153,21 +171,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:id="@+id/sms_layout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:clickable="true"
                         android:focusable="true"
-                        android:gravity="center_vertical|center_horizontal"
                         android:orientation="vertical"
                         android:padding="10dp">
 
 
                         <ImageView
+                            android:id="@+id/smsIcon"
                             android:layout_width="56dp"
                             android:layout_height="60dp"
                             android:layout_margin="5dp"
+                            android:layout_centerHorizontal="true"
                             android:contentDescription="@string/nan"
                             android:src="@drawable/sms_icon" />
 
@@ -176,12 +195,29 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="3dp"
                             android:text="@string/gallery"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/smsIcon"
                             android:textColor="@color/material_gre"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/sms_count"
+                            android:layout_width="@dimen/size_20sp"
+                            android:layout_height="20dp"
+                            android:padding="2dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/circle"
+                            android:layout_marginLeft="55dp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:backgroundTint="@color/red"
+                            android:text="@string/allevents"
+                            android:textColor="@color/white"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
 
-                    </LinearLayout>
+                    </RelativeLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </android.support.v7.widget.CardView>
 
@@ -201,36 +237,53 @@
                 <com.balysv.materialripple.MaterialRippleLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:id="@+id/home_inbox_events"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:clickable="true"
                         android:focusable="true"
-                        android:gravity="center_vertical|center_horizontal"
                         android:orientation="vertical"
                         android:padding="10dp">
 
 
                         <ImageView
-                            android:layout_width="60dp"
+                            android:id="@+id/inboxIcon"
+                            android:layout_width="56dp"
                             android:layout_height="60dp"
                             android:layout_margin="5dp"
+                            android:layout_centerHorizontal="true"
                             android:contentDescription="@string/nan"
-                            app:srcCompat="@drawable/inbox_parent" />
+                            android:src="@drawable/inbox_parent" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="3dp"
                             android:text="@string/inbox"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/inboxIcon"
                             android:textColor="@color/material_gre"
                             android:textSize="12sp"
                             android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/inbox_count"
+                            android:layout_width="@dimen/size_20sp"
+                            android:layout_height="20dp"
+                            android:padding="2dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/circle"
+                            android:layout_marginLeft="55dp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:backgroundTint="@color/red"
+                            android:text="@string/allevents"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
 
+                    </RelativeLayout>
 
-                    </LinearLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </android.support.v7.widget.CardView>
 
@@ -311,36 +364,53 @@
                 <com.balysv.materialripple.MaterialRippleLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:id="@+id/home_diary_events"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:clickable="true"
                         android:focusable="true"
-                        android:gravity="center_vertical|center_horizontal"
                         android:orientation="vertical"
                         android:padding="10dp">
 
 
                         <ImageView
-                            android:layout_width="60dp"
+                            android:id="@+id/diaryIcon"
+                            android:layout_width="56dp"
                             android:layout_height="60dp"
                             android:layout_margin="5dp"
+                            android:layout_centerHorizontal="true"
                             android:contentDescription="@string/nan"
-                            app:srcCompat="@drawable/diary_parent" />
+                            android:src="@drawable/diary_parent" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="3dp"
                             android:text="@string/diary"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/diaryIcon"
                             android:textColor="@color/material_gre"
                             android:textSize="12sp"
                             android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/diary_count"
+                            android:layout_width="@dimen/size_20sp"
+                            android:layout_height="20dp"
+                            android:padding="2dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/circle"
+                            android:layout_marginLeft="55dp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:backgroundTint="@color/red"
+                            android:text="@string/allevents"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
 
+                    </RelativeLayout>
 
-                    </LinearLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </android.support.v7.widget.CardView>
 
@@ -358,36 +428,53 @@
                 <com.balysv.materialripple.MaterialRippleLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:id="@+id/home_assignment_events"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:clickable="true"
                         android:focusable="true"
-                        android:gravity="center_vertical|center_horizontal"
                         android:orientation="vertical"
                         android:padding="10dp">
 
 
                         <ImageView
-                            android:layout_width="60dp"
+                            android:id="@+id/assignIcon"
+                            android:layout_width="56dp"
                             android:layout_height="60dp"
                             android:layout_margin="5dp"
+                            android:layout_centerHorizontal="true"
                             android:contentDescription="@string/nan"
-                            app:srcCompat="@drawable/assignment_parent" />
+                            android:src="@drawable/assignment_parent" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="3dp"
                             android:text="@string/assignement"
+                            android:layout_below="@+id/assignIcon"
                             android:textColor="@color/material_gre"
+                            android:textSize="12sp"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/assign_count"
+                            android:layout_width="@dimen/size_20sp"
+                            android:layout_height="20dp"
+                            android:padding="2dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/circle"
+                            android:layout_marginLeft="55dp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:backgroundTint="@color/red"
+                            android:text="@string/allevents"
+                            android:textColor="@color/white"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
+                    </RelativeLayout>
 
-                    </LinearLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </android.support.v7.widget.CardView>
 
@@ -422,21 +509,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:id="@+id/home_social_grade_events"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:clickable="true"
                         android:focusable="true"
-                        android:gravity="center_vertical|center_horizontal"
                         android:orientation="vertical"
                         android:padding="10dp">
 
 
                         <ImageView
+                            android:id="@+id/gradeIcon"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_margin="5dp"
+                            android:layout_centerHorizontal="true"
                             android:contentDescription="@string/nan"
                             app:srcCompat="@drawable/social_parent" />
 
@@ -444,13 +532,29 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="3dp"
+                            android:layout_below="@+id/gradeIcon"
                             android:text="@string/nav_social_grade_string"
                             android:textColor="@color/material_gre"
                             android:textSize="12sp"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/grade_count"
+                            android:layout_width="@dimen/size_20sp"
+                            android:layout_height="20dp"
+                            android:padding="2dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/circle"
+                            android:layout_marginLeft="55dp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:backgroundTint="@color/red"
+                            android:text="@string/allevents"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
                             android:textStyle="bold" />
 
-
-                    </LinearLayout>
+                    </RelativeLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </android.support.v7.widget.CardView>
 
@@ -469,21 +573,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:id="@+id/home_event_events"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:clickable="true"
                         android:focusable="true"
-                        android:gravity="center_vertical|center_horizontal"
                         android:orientation="vertical"
                         android:padding="10dp">
 
 
                         <ImageView
+                            android:id="@+id/eventIcon"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_margin="5dp"
+                            android:layout_centerHorizontal="true"
                             android:contentDescription="@string/nan"
                             app:srcCompat="@drawable/events_parent" />
 
@@ -491,13 +596,29 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="3dp"
+                            android:layout_below="@+id/eventIcon"
                             android:text="@string/events"
+                            android:layout_centerHorizontal="true"
                             android:textColor="@color/material_gre"
                             android:textSize="12sp"
                             android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/event_count"
+                            android:layout_width="@dimen/size_20sp"
+                            android:layout_height="20dp"
+                            android:padding="2dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/circle"
+                            android:layout_marginLeft="55dp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:backgroundTint="@color/red"
+                            android:text="@string/allevents"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
 
-
-                    </LinearLayout>
+                    </RelativeLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </android.support.v7.widget.CardView>
 
@@ -547,6 +668,216 @@
                     </LinearLayout>
                 </com.balysv.materialripple.MaterialRippleLayout>
             </android.support.v7.widget.CardView>
+
+
+        </TableRow>
+
+        <!--<LinearLayout
+            android:layout_width="384dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.1"
+
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="107dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/feeCard"
+                android:gravity="center_vertical|center_horizontal"
+                app:cardCornerRadius="@dimen/spacing_medium"
+
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+
+
+                    <LinearLayout
+                        android:id="@+id/invoice_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="5dp"
+                            android:contentDescription="@string/nan"
+                            app:srcCompat="@drawable/invoicce" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="@string/Fee"
+                            android:textColor="@color/material_gre"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+
+
+        </LinearLayout>-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/feeCard"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                app:cardCornerRadius="@dimen/spacing_medium"
+
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/invoice_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="5dp"
+                            android:contentDescription="@string/nan"
+                            app:srcCompat="@drawable/invoicce" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="@string/fee_pay"
+                            android:textColor="@color/material_gre"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </android.support.v7.widget.CardView>
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="5dp"
+                            android:contentDescription="@string/nan"
+                            app:srcCompat="@drawable/invoicce" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="@string/fee_pay"
+                            android:textColor="@color/material_gre"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="5dp"
+                            android:contentDescription="@string/nan"
+                            app:srcCompat="@drawable/invoicce" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="@string/fee_pay"
+                            android:textColor="@color/material_gre"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </RelativeLayout>
+
 
 
         </TableRow>

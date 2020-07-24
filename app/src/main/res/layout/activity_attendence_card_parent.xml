@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context="com.classroomjoin.app.attendancePage.AttendanceActivity">
+        tools:context="com.denobili.app.attendancePage.AttendanceActivity">
 
         <com.prolificinteractive.materialcalendarview.MaterialCalendarView
             xmlns:app="http://schemas.android.com/apk/res-auto"

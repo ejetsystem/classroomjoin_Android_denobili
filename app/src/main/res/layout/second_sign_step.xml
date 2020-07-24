@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/size_20sp"
+        android:layout_marginRight="@dimen/size_20sp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In +91"
+            android:textSize="15dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:maxEms="12"
+            android:maxLength="12"
+            android:singleLine="true"
+            android:inputType="number"
+            android:textSize="15dp"
+            android:hint="Phone Number"
+            android:layout_marginLeft="@dimen/size_20sp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/size_20sp"
+        android:layout_marginRight="@dimen/size_20sp"
+        android:background="@color/gray"/>
+    <LinearLayout
+        android:id="@+id/pass_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/size_20sp"
+        android:layout_marginRight="@dimen/size_20sp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:maxEms="20"
+            android:maxLength="20"
+            android:paddingLeft="45dp"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:textSize="15dp"
+            android:hint="Password"
+            android:layout_marginLeft="@dimen/size_20sp"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/pass_view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/size_20sp"
+        android:layout_marginRight="@dimen/size_20sp"
+        android:background="@color/gray"/>
+    <TextView
+        android:id="@+id/forgot_password_button1"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:layout_marginLeft="@dimen/size_20sp"
+        android:layout_marginTop="@dimen/size_20sp"
+        android:text="Forget Password"/>
+    <TextView
+        android:id="@+id/my_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_20sp"
+
+        android:layout_marginBottom="@dimen/size_20sp"
+        android:text="By continuing,you agree to classroomJoin Term of use and confirm that you have read classroomJoin Privacy policy."
+        android:textColorHighlight="#111111"
+        android:textColorLink="#0E0E0E"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/size_20sp"
+        android:layout_marginRight="@dimen/size_20sp"
+        android:layout_gravity="center"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/nextToC"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_size"
+        android:backgroundTint="@color/light_gray"
+        android:background="@drawable/rectangle_border"
+        android:layout_marginRight="@dimen/size_20sp"
+        android:layout_marginLeft="@dimen/size_20sp"
+        android:text="Send Code"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

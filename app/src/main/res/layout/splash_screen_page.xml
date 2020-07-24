@@ -8,6 +8,6 @@
         android:layout_height="match_parent"
         android:contentDescription="@string/app_name"
         android:scaleType="centerCrop"
-        android:src="@mipmap/splashscreen"/>
+        android:src="@drawable/denobili"/>
 
 </LinearLayout>

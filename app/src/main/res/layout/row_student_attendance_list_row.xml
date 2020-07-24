@@ -52,7 +52,7 @@
             app:layout_constraintRight_toLeftOf="@+id/checkableImageView"
             app:layout_constraintTop_toTopOf="@+id/checkableImageView" />
 
-        <com.classroomjoin.app.helper.CheckableImageView
+        <com.denobili.app.helper.CheckableImageView
             android:id="@+id/checkableImageView"
             android:layout_width="60dp"
             android:layout_height="60dp"

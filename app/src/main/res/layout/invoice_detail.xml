@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:background="@color/holo_blue_light"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fragment_title_padding_10"
+        android:id="@+id/fee_status"/>
+    <ImageView
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:id="@+id/back"
+        android:layout_margin="@dimen/fragment_title_padding_10"
+        android:src="@drawable/ic_arrow_back_white_24dp"
+        />
+     <TextView
+         android:id="@+id/invoiceD"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Invoice-#13032"
+         android:fontFamily="@font/poppins_bold"
+         android:layout_toRightOf="@+id/back"
+         android:textColor="@color/white"
+         android:textSize="18dp"
+         android:layout_marginTop="11dp"/>
+    <TextView
+        android:id="@+id/rec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RECEIPT FOR"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_below="@+id/back"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/white"
+        android:textSize="15dp"/>
+    <TextView
+        android:id="@+id/receipt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RECEIPT FOR"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_below="@+id/rec"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_20sp"/>
+</RelativeLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/invoiceImg"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/invoice"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:id="@+id/inId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INVOICE ID"
+            android:layout_toRightOf="@+id/invoiceImg"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/inNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INVOICE ID"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_below="@+id/inId"
+            android:layout_toRightOf="@+id/invoiceImg"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="15dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/inNum"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/amtImg"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/inamount"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:id="@+id/inAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INVOICE AMOUNT"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_toRightOf="@+id/amtImg"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/inAm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INVOICE ID"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_below="@+id/inAmt"
+            android:layout_toRightOf="@+id/amtImg"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="15dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/inAm"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/feeImg"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/feedate"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:id="@+id/feeMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FEE MONTH-YEAR"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_toRightOf="@+id/feeImg"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/feeDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INVOICE ID"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_below="@+id/feeMonth"
+            android:layout_toRightOf="@+id/feeImg"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="15dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/feeDate"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/recImg"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/reciept"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:id="@+id/reci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECIPIENT"
+            android:layout_toRightOf="@+id/recImg"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/recNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INVOICE ID"
+            android:layout_below="@+id/reci"
+            android:layout_toRightOf="@+id/recImg"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="15dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/recNum"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/adjusImg"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/adjust"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:id="@+id/adjusId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADJUSTMENT"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_toRightOf="@+id/adjusImg"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/adjusNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:layout_below="@+id/adjusId"
+            android:layout_toRightOf="@+id/adjusImg"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="15dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/adjusNum"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray"/>
+
+    </RelativeLayout>
+<Button
+    android:id="@+id/transactionD"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="SEE TRANSACTIONS"
+    android:layout_gravity="center"
+    android:visibility="gone"
+    android:fontFamily="@font/poppins_bold"
+    android:layout_marginTop="@dimen/fragment_title_padding_10"
+    android:background="@drawable/list_rec"
+    android:paddingLeft="@dimen/fragment_title_padding_10"
+    android:paddingRight="@dimen/fragment_title_padding_10"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/anuual_fee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/include_content"
+        layout="@layout/content_main" />
+
+</LinearLayout>
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/include_content"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/base_home_image"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/nan"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_error_black_24dp" />
+
+        <TextView
+            android:id="@+id/base_home_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/app_name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/size_20sp"
+            android:textStyle="bold|italic"
+            android:visibility="gone" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:visibility="gone"
+            android:background="@color/button_background_disabled_end">
+            <TextView
+                android:id="@+id/invoicehead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:text="Invoice-"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/invoice_id"
+                android:text="11032"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/invoicehead"
+                android:layout_marginLeft="@dimen/fragment_title_padding_10"/>
+        </RelativeLayout>
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TableRow android:background="#D7D8DA" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:text="Invoice ID" />
+                <TextView
+                    android:id="@+id/invoiceid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1100" />
+
+
+            </TableRow>
+            <TableRow android:background="#F5F6F8" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:text="Fee Month" />
+                <TextView
+                    android:id="@+id/month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="January" />
+            </TableRow>
+            <TableRow android:background="#D7D8DA" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:text="Invoice Amt." />
+                <TextView
+                    android:id="@+id/invoice_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Guntur" />
+            </TableRow>
+            <TableRow android:background="#F5F6F8" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+
+                    android:text="Recipient" />
+                <TextView
+                    android:id="@+id/recName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLength="12"
+                    android:ellipsize="end"
+                    android:text="Madhumita Mukharjee" />
+
+            </TableRow>
+            <TableRow android:background="#D7D8DA" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+
+                    android:text="Adjustment" />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.0" />
+            </TableRow>
+            <TableRow android:background="#F5F6F8" android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:text="Discount" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.0" />
+            </TableRow>
+            <TableRow android:background="#D7D8DA" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:text="Payment Detail" />
+                <TextView
+                    android:id="@+id/paymentDet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Trishika Dasari" />
+            </TableRow>
+            <TableRow android:background="#F5F6F8" android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:text="Status" />
+                <TextView
+                    android:id="@+id/fee_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Guntur" />
+            </TableRow>
+
+        </TableLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            >
+            <TableRow android:background="@color/button_background_disabled_end" android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="Particulars" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="Description" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="Amount" />
+
+            </TableRow>
+        </TableLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:minHeight="260dp"
+
+            android:paddingBottom="50dp" />
+
+        <android.support.v4.widget.ContentLoadingProgressBar
+            android:id="@+id/contentLoading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>
+
+
+    &lt;!&ndash;
+    <android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/button_background_disabled_end">
+                <TextView
+                    android:id="@+id/invoicehead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Invoice-"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/invoice_id"
+                    android:text="11032"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/invoicehead"
+                    android:layout_marginLeft="@dimen/fragment_title_padding_10"/>
+            </RelativeLayout>
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                 >
+                <TableRow android:background="#D7D8DA" android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:text="Invoice ID" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="1100" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:text="Fee Month" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="January" />
+
+                </TableRow>
+                <TableRow android:background="#F5F6F8" android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+
+                        android:text="Recipient" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLength="12"
+                        android:ellipsize="end"
+                        android:text="Madhumita Mukharjee" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:text="Invoice Amount" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Guntur" />
+                </TableRow>
+                <TableRow android:background="#D7D8DA" android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+
+                        android:text="Adjustment" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Trishika Dasari" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:text="Discount" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Guntur" />
+                </TableRow>
+                <TableRow android:background="#F5F6F8" android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:text="Payment Detail" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Trishika Dasari" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:text="Status" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Guntur" />
+                </TableRow>
+
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                >
+                <TableRow android:background="@color/button_background_disabled_end" android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Particulars" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:text="Description" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Unit Price" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:text="Amount" />
+
+                </TableRow>
+            </TableLayout>
+            <include
+                android:id="@+id/include_content"
+                layout="@layout/content_main" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    &ndash;&gt;
+-->

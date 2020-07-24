@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.TayfunCesur:Stepper:1.0.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/55add2bd29496df09a5512f316db80d8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/55add2bd29496df09a5512f316db80d8/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.TayfunCesur/Stepper/1.0.2/9578b8390a9cf001c396acc5dbc1b6e6045ae00/Stepper-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

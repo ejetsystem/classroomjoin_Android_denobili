@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".landing_page.LandingActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:paddingBottom="50dp">
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/size_20sp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/logo2" />
+        <TextView
+            android:id="@+id/privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="18dp"
+            android:text="@string/sign_txt"
+            android:layout_gravity="center"
+            />
+        <Button
+            android:id="@+id/button_sign_submit"
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:text="Sign Up"
+            android:background="@color/green"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/size_20sp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        <Button
+            android:id="@+id/signin"
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:text="Sign In"
+            android:background="@color/green"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/size_20sp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/signUpBtn"
+        android:layout_width="match_parent"
+        android:background="@drawable/rectangle_border"
+        android:layout_height="@dimen/button_size"
+        android:textColorHighlight="#F44336"
+        android:layout_alignParentBottom="true"
+        android:textColorLink="#F44336"
+
+        android:text="@string/support_num"
+        android:textColor="@color/black"
+        android:backgroundTint="#ECEAEA"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+</RelativeLayout>

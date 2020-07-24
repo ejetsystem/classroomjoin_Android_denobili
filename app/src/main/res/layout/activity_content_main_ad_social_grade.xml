@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.classroomjoin.app.homepage.HomePage">
+    tools:context="com.denobili.app.homepage.HomePage">
 
     <include
         android:id="@+id/include_content_social_grade"

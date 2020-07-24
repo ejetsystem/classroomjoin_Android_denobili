@@ -17,7 +17,7 @@
             android:orientation="vertical"
             android:visibility="gone">
 
-            <com.classroomjoin.app.helper.SettingsView
+            <com.denobili.app.helper.SettingsView
                 android:id="@+id/gmail_settings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
                 android:visibility="gone"
                 android:background="@color/green" />
 
-            <com.classroomjoin.app.helper.SettingsView
+            <com.denobili.app.helper.SettingsView
                 android:id="@+id/send_grid_settings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

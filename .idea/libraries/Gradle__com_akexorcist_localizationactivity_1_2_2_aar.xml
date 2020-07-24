@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.akexorcist:localizationactivity:1.2.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/localizationactivity-1.2.2.aar/0d2123981f5fb9c226d68c113b293160/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/localizationactivity-1.2.2.aar/0d2123981f5fb9c226d68c113b293160/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8ed2a1d6865841f1e95b0b600232a4b0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8ed2a1d6865841f1e95b0b600232a4b0/res" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.akexorcist/localizationactivity/1.2.2/1d707462288b6cf1680ed5666a3352d3ea284df7/localizationactivity-1.2.2-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.akexorcist/localizationactivity/1.2.2/a784513885c886306c0efcc5a9c8d773dae91ca6/localizationactivity-1.2.2-sources.jar!/" />
     </SOURCES>

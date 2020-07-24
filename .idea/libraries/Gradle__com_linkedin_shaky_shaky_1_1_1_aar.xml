@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.linkedin.shaky:shaky:1.1.1@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/shaky-1.1.1.aar/f55c22435a0825b7dc8d6d2fbe1bbe19/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/128e004b1d028b835b35a2e49633b22d/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/shaky-1.1.1.aar/f55c22435a0825b7dc8d6d2fbe1bbe19/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/shaky-1.1.1.aar/f55c22435a0825b7dc8d6d2fbe1bbe19/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/128e004b1d028b835b35a2e49633b22d/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/128e004b1d028b835b35a2e49633b22d/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

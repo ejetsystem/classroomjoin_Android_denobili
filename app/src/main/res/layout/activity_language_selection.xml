@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_soft"
-    tools:context="com.classroomjoin.app.splashPage.LanguageSelectionActivity">
+    tools:context="com.denobili.app.splashPage.LanguageSelectionActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -19,11 +19,11 @@
 
             <ImageView
                 android:id="@+id/imageView311"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="190dp"
+                android:layout_height="210dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-                android:background="@mipmap/splaah"
+                android:background="@mipmap/logo2"
                 android:contentDescription="@string/nan"
                 android:scaleType="centerCrop" />
 
@@ -31,11 +31,12 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/welcome"
                 android:textSize="28sp"
+                android:visibility="visible"
                 android:textStyle="bold" />
 
             <TextView
@@ -43,8 +44,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
+                android:visibility="visible"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/please_selct_language"
@@ -58,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="15dp" />
 
             <!-- <TableRow
                  android:layout_width="match_parent"

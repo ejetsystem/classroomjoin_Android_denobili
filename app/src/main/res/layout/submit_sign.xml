@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textSize="@dimen/size_20sp"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/size_20sp"
+        android:layout_marginRight="@dimen/size_20sp"
+
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:textSize="15dp"
+            android:hint="Full Name"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/size_20sp"
+        android:layout_marginRight="@dimen/size_20sp"
+        android:background="@color/gray"/>
+
+    <LinearLayout
+        android:id="@+id/emailLin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/size_20sp"
+        android:layout_marginRight="@dimen/size_20sp"
+android:layout_marginTop="@dimen/size_20sp"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:textSize="15dp"
+            android:hint="Email"
+            />
+    </LinearLayout>
+    <View
+        android:id="@+id/view11"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/size_20sp"
+        android:layout_marginRight="@dimen/size_20sp"
+        android:background="@color/gray"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/user_type_selection_text"
+        android:textColor="@color/titles_color"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RadioButton
+            android:id="@+id/usertype_student"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/radio_button"
+            android:gravity="center"
+            android:text="@string/susertype_student"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/usertype_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="10dp"
+
+            android:drawableTop="@drawable/radio_button"
+            android:gravity="center"
+            android:text="@string/susertype_parent"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/usertype_individual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/radio_button"
+            android:gravity="center"
+            android:text="@string/susertype_teacher"
+            android:textSize="16sp" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/terms_of_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_20sp"
+
+        android:layout_marginBottom="@dimen/size_20sp"
+        android:text="@string/termsofservice"
+        android:textColorHighlight="#111111"
+        android:textColorLink="#0E0E0E"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/size_20sp"
+        android:layout_marginRight="@dimen/size_20sp"
+        android:layout_gravity="center"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/nextToD"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_size"
+        android:backgroundTint="@color/light_gray"
+        android:background="@drawable/rectangle_border"
+        android:layout_marginRight="@dimen/size_20sp"
+        android:layout_marginLeft="@dimen/size_20sp"
+        android:text="Sign Up"
+        android:textAllCaps="false"/>
+
+
+</LinearLayout>

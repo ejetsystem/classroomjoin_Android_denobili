@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.classroomjoin.app">
+    package="com.denobili.app">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -9,75 +9,137 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <!-- <uses-permission android:name="android.permission.READ_SMS" />
+     <uses-permission android:name="android.permission.RECEIVE_SMS" />-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
 
     <application
-        android:name=".helper_utils.Myapp"
+        android:name="com.denobili.app.helper_utils.Myapp"
         android:allowBackup="true"
-        android:icon="@mipmap/logo_1x"
+        android:icon="@mipmap/logo3"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/logo_1x"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/logo3"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:replace="android:icon,android:theme,android:label"
-        android:networkSecurityConfig="@xml/network_security_config"
-       android:usesCleartextTraffic="true"
-        >
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon,android:theme,android:label">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:name="com.denobili.app.invoice.payment.HomeActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
 
+        <activity android:name="com.denobili.app.invoice.payment.EFragmentActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.denobili.app.invoice.payment.FLSimpleActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.denobili.app.invoice.payment.FExtendedActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.denobili.app.landing_page.SlideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity android:name="com.denobili.app.invoice.trans_detail.TransDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name="com.denobili.app.landing_page.Home2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name="com.denobili.app.invoice.invoice_detail.InvoiceDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.denobili.app.slide_login.LoginMainActivty"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".helper_utils.ProductListActivty"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.denobili.app.invoice.InvoiceListingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"  />
+        <activity
+            android:label="Processing your payment"
+            android:name="in.juspay.godel.PaymentActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            >
+        </activity>
+        <activity
+            android:name="com.denobili.app.landing_page.SignUp"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.denobili.app.landing_page.AccountOption"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.denobili.app.sign_step.SignupMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.denobili.app.landing_page.LandingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="firebase_crashlytics_collection_enabled"
             android:value="false" />
 
         <activity
-            android:name=".homepage.HomePage"
+            android:name="com.denobili.app.homepage.HomePage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".studentDetailPage.StudentDetailPage" />
+        <activity android:name="com.denobili.app.studentDetailPage.StudentDetailPage" />
         <activity
-            android:name=".studentDetailPage.StudentDetailEditPage"
+            android:name="com.denobili.app.studentDetailPage.StudentDetailEditPage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".attendancePage.AttendanceActivity"
+            android:name="com.denobili.app.attendancePage.AttendanceActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".postAttendancePage.AttendenceSelectionListingActivity"
+            android:name="com.denobili.app.postAttendancePage.AttendenceSelectionListingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar2" />
         <activity
-            android:name=".mystudentsPage.MyStudentsListingActivity"
+            android:name="com.denobili.app.mystudentsPage.MyStudentsListingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".loginPage.LoginActivity"
+            android:name="com.denobili.app.loginPage.LoginActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.denobili.app.signUpPage.SignUpActivity"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".signUpPage.SignUpActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".splashPage.SplashActivity"
+            android:name="com.denobili.app.splashPage.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".addSocialGrade.AddSocialGradePage"
+            android:name="com.denobili.app.addSocialGrade.AddSocialGradePage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.new" />
         <activity
-            android:name=".socialGradeSelectionPage.SocialGradeSelectionPage"
+            android:name="com.denobili.app.socialGradeSelectionPage.SocialGradeSelectionPage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar2" />
         <activity
-            android:name=".templatePage.TemplateSelectionPage"
+            android:name="com.denobili.app.templatePage.TemplateSelectionPage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar2" />
 
@@ -92,81 +154,79 @@
         </provider>
 
         <activity
-            android:name=".studentHomePage.Student_Home_Activity"
+            android:name="com.denobili.app.studentHomePage.Student_Home_Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".smsCommunicationSettingPage.SmsCommunicationSettingPage"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.new" />
-
-        <activity
-            android:name=".smsCommunicationSettingPage.MessageCommunicationSettingPage"
+            android:name="com.denobili.app.smsCommunicationSettingPage.SmsCommunicationSettingPage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.new" />
         <activity
-            android:name=".emailSettingPage.EmailSettingPage"
+            android:name="com.denobili.app.smsCommunicationSettingPage.MessageCommunicationSettingPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.new" />
+        <activity
+            android:name="com.denobili.app.emailSettingPage.EmailSettingPage"
             android:label="@string/email_communication_setting"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.new" />
         <activity
-            android:name=".studentCodePage.InputStudentCode"
+            android:name="com.denobili.app.studentCodePage.InputStudentCode"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
-        <service android:name=".helper_utils.MyFirebaseMessagingService">
+        <service android:name="com.denobili.app.helper_utils.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
-        <service android:name=".helper_utils.MyFirebaseInstanceIDService">
+        <service android:name="com.denobili.app.helper_utils.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
         <activity
-            android:name=".teacherHomePage.TeacherHomePage"
+            android:name="com.denobili.app.teacherHomePage.TeacherHomePage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".classEditPage.EditClassPage"
+            android:name="com.denobili.app.classEditPage.EditClassPage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".mySocialGradesPage.MySocialGradesListingActivity"
+            android:name="com.denobili.app.mySocialGradesPage.MySocialGradesListingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar2" />
         <activity
-            android:name=".addTemplatePage.AddTemplatePage"
+            android:name="com.denobili.app.addTemplatePage.AddTemplatePage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".forgotPasswordPage.ForgotPasswordActivity"
+            android:name="com.denobili.app.forgotPasswordPage.ForgotPasswordActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
 
-        <receiver android:name=".otpReaderLibrary.OtpReader">
+        <receiver android:name="com.denobili.app.otpReaderLibrary.OtpReader">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
 
         <activity
-            android:name=".myConnectedStudents.MyConnectedStudentsListingActivity"
+            android:name="com.denobili.app.myConnectedStudents.MyConnectedStudentsListingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".studentDiaryPage.StudentDiaryActivity"
+            android:name="com.denobili.app.studentDiaryPage.StudentDiaryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.new" />
         <activity
-            android:name=".studentallEventsPage.AlleventsActivity"
+            android:name="com.denobili.app.studentallEventsPage.AlleventsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.new" />
         <activity
-            android:name=".studentEventDetailPage.EventDetailActivity"
+            android:name="com.denobili.app.studentEventDetailPage.EventDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.new">
             <intent-filter>
@@ -182,95 +242,94 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".studentDiaryEventDetailPage.DiaryEventDetailActivity"
+            android:name="com.denobili.app.studentDiaryEventDetailPage.DiaryEventDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.new" />
         <activity
-            android:name=".studentInboxPage.StudentInboxPage"
+            android:name="com.denobili.app.studentInboxPage.StudentInboxPage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.new" />
         <activity
-            android:name=".studentSocialGradeReportPage.StudentSocialGradeReportActivity"
+            android:name="com.denobili.app.studentSocialGradeReportPage.StudentSocialGradeReportActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".teacherReportPage.TeacherReportPage"
+            android:name="com.denobili.app.teacherReportPage.TeacherReportPage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".teacherCommunicationReports.TeacherCommunicationReportPage"
+            android:name="com.denobili.app.teacherCommunicationReports.TeacherCommunicationReportPage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".attendanceSummaryPage.AttendanceSummaryListActivity"
+            android:name="com.denobili.app.attendanceSummaryPage.AttendanceSummaryListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".teacherSocialGradeReport.SocialGradeClassReportPage"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".ReportsMessageDetails"
+            android:name="com.denobili.app.teacherSocialGradeReport.SocialGradeClassReportPage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".teacherMessageSendPage.TeacherCommunicationPage"
+            android:name="com.denobili.app.ReportsMessageDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.denobili.app.teacherMessageSendPage.TeacherCommunicationPage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar2"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".manageAccountsPackage.ManageAccountsPage"
+            android:name="com.denobili.app.manageAccountsPackage.ManageAccountsPage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".profilePage.ProfilePage"
+            android:name="com.denobili.app.profilePage.ProfilePage"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeTest" />
         <activity
-            android:name=".attendancePage.ParentAttendanceActivity"
+            android:name="com.denobili.app.attendancePage.ParentAttendanceActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".teacherOutboxPage.Outboxpage"
+            android:name="com.denobili.app.teacherOutboxPage.Outboxpage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".teacherAttachmentPage.ImageChooserActivity"
+            android:name="com.denobili.app.teacherAttachmentPage.ImageChooserActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".teacherAttachmentPage.DocumentChooserActivity"
+            android:name="com.denobili.app.teacherAttachmentPage.DocumentChooserActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".profileEditPage.ProfileEditPage"
+            android:name="com.denobili.app.profileEditPage.ProfileEditPage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".profileEditPage.ProfileImageChooserActivity"
+            android:name="com.denobili.app.profileEditPage.ProfileImageChooserActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".studentSearchPage.StudentSearchPage"
+            android:name="com.denobili.app.studentSearchPage.StudentSearchPage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".loadWebPage.WebPage"
+            android:name="com.denobili.app.loadWebPage.WebPage"
             android:label="@string/nav_back"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.new" />
 
         <service
-            android:name=".helper_utils.CheckOutboxService"
+            android:name="com.denobili.app.helper_utils.CheckOutboxService"
             android:enabled="true"
             android:exported="true" />
 
         <activity
-            android:name=".outboxExpiredPage.OutboxExpiredPage"
+            android:name="com.denobili.app.outboxExpiredPage.OutboxExpiredPage"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Dialog" />
         <activity
-            android:name=".splashPage.LanguageSelectionActivity"
+            android:name="com.denobili.app.splashPage.LanguageSelectionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>

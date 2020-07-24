@@ -4,6 +4,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'realm-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+repositories {
+    mavenCentral()
+    maven {
+        url "https://s3-ap-southeast-1.amazonaws.com/godel-release/godel/"
+    }
+}
 
 androidExtensions {
     defaultCacheImplementation = "none"
@@ -14,11 +20,11 @@ androidExtensions {
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.classroomjoin.app"
+        applicationId "com.denobili.app"
         minSdkVersion 17
         targetSdkVersion 28
-        versionCode 60
-        versionName "1.27.32"
+        versionCode 5
+        versionName "1.0.4"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
 
@@ -62,7 +68,7 @@ android {
 dependencies {
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-
+    def paging_version = "1.0.0"
     def dependencies = rootProject.ext.viewDependencies
     def networkingDependecies = rootProject.ext.networkingDependecies
 
@@ -73,21 +79,25 @@ dependencies {
     implementation 'com.android.support:cardview-v7:28.0.0'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'in.juspay:godel:0.6.25.1423'
 
-    compile 'com.google.android.gms:play-services-auth:16.0.1'
+
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
 
     implementation 'com.android.support:multidex:1.0.3'
-
+    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-
     implementation 'com.google.firebase:firebase-core:16.0.4'
     implementation 'com.google.firebase:firebase-messaging:17.3.3'
     implementation 'com.google.firebase:firebase-config:16.0.1'
     implementation 'com.google.firebase:firebase-crash:16.2.1'
-   // implementation 'com.google.firebase:firebase-ads:17.0.0'
-
+    implementation 'com.github.TayfunCesur:Stepper:1.0.2'
+    // implementation 'com.google.firebase:firebase-ads:17.0.0'
+    implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0"
+    implementation "android.arch.navigation:navigation-ui-ktx:1.0.0"
+    implementation "com.github.thekhaeng:pushdown-anim-click:1.1.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
-
+    implementation "android.arch.paging:runtime:$paging_version"
     implementation 'com.crashlytics.sdk.android:crashlytics:2.9.5'
 
     implementation dependencies.adapterDelegate
@@ -105,6 +115,7 @@ dependencies {
     implementation networkingDependecies.javaxInject
     implementation 'lt.neworld:spanner:0.5.0'
     implementation 'com.karumi:dexter:5.0.0'
+    implementation "me.leolin:ShortcutBadger:1.1.21@aar"
     implementation 'com.appeaser.sublimepickerlibrary:sublimepickerlibrary:2.1.1'
     implementation 'com.balysv:material-ripple:1.0.2'
     implementation 'com.akexorcist:localizationactivity:1.2.2'

@@ -9,7 +9,7 @@
     android:padding="10dp">
 
 
-    <com.classroomjoin.app.helper.CircularCheckableTextView
+    <com.denobili.app.helper.CircularCheckableTextView
         android:id="@+id/student_roll_no_selection"
         android:layout_width="60dp"
         android:layout_height="60dp"

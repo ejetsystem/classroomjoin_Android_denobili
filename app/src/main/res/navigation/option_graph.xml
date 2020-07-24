@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/fragmentA">
+
+  <fragment
+      android:id="@+id/fragmentA"
+      android:name="com.denobili.app.slide_login.LoginStep"
+      android:label="Fragment A"
+      tools:layout="@layout/first_step_sign">
+    <action
+        android:id="@+id/fragmentCtoD"
+        app:destination="@+id/fragmentd"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+  </fragment>
+
+  <fragment
+      android:id="@+id/fragmentB"
+      android:name="com.denobili.app.slide_login.FirstStep"
+      android:label="Fragment B"
+      tools:layout="@layout/second_sign_step">
+    <action
+        android:id="@+id/fragmentCtoD"
+        app:destination="@+id/fragmentd"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+  </fragment>
+
+  <fragment
+      android:id="@+id/fragmentC"
+      android:name="com.denobili.app.slide_login.SecondLoginStep"
+      android:label="Fragment C"
+      tools:layout="@layout/final_sign">
+    <action
+        android:id="@+id/fragmentCtoD"
+        app:destination="@+id/fragmentd"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+  </fragment>
+  <fragment
+      android:id="@+id/fragmentd"
+      android:name="com.denobili.app.sign_step.CreatePass"
+      android:label="Fragment D"
+      tools:layout="@layout/create_pass">
+    <action
+        android:id="@+id/fragmentCtoD"
+        app:destination="@+id/fragmentA"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+  </fragment>
+
+</navigation>

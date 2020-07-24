@@ -22,7 +22,7 @@
             android:orientation="horizontal"
             android:padding="10dp">
 
-            <com.classroomjoin.app.helper.CircularTextView
+            <com.denobili.app.helper.CircularTextView
                 android:id="@+id/circularTextView2_report"
                 android:layout_width="50dp"
                 android:layout_height="50dp"

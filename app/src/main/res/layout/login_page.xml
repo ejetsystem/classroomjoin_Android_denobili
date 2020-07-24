@@ -7,7 +7,7 @@
     android:background="#EBEBEB"
     android:fillViewport="true"
     android:orientation="vertical"
-    tools:context="com.classroomjoin.app.studentDetailPage.StudentDetailEditPage">
+    tools:context="com.denobili.app.studentDetailPage.StudentDetailEditPage">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -61,7 +61,7 @@
                 android:paddingStart="20dp"
                 android:textSize="16sp" />
 
-            <android.support.design.widget.TextInputEditText
+            <EditText
                 android:id="@+id/input_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
